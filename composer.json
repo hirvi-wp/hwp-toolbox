@@ -18,5 +18,8 @@
         "files": [
             "helpers.php"
         ]
+    },
+    "require": {
+        "composer/installers": "~1.0"
     }
 }
