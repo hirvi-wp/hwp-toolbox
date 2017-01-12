@@ -31,7 +31,7 @@ class TGMPA {
      * @param array $plugins
      * @param array $userConfig
      */
-    public static function setup(array $plugins, array $userConfig)
+    public static function setup(array $plugins, $userConfig = [])
     {
         static::$plugins = $plugins;
         static::$config = array_merge_recursive(static::$config, $userConfig);
