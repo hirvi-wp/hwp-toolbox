@@ -1,6 +1,6 @@
 <?php
 
-namespace Hirvi\Toolbox\Plugin;
+namespace HWP\Toolbox\Plugin;
 
 class PluginActivation {
 

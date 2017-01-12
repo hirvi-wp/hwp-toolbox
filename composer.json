@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Hirvi\\Toolbox\\": "src/"
+            "HWP\\Toolbox\\": "src/"
         },
         "files": [
             "helpers.php"
