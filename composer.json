@@ -1,0 +1,22 @@
+{
+    "name": "hirvi-wp/toolbox",
+    "description": "Common classes and functions for WP Development.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0",
+    "homepage": "http://hirvi.no/",
+    "authors": [
+        {
+            "name": "Chris Magnussen",
+            "email": "chris@hirvi.no",
+            "homepage": "https://hirvi.no/team/chris"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hirvi\\Toolbox\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    }
+}
