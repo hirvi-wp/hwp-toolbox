@@ -1,5 +1,5 @@
 {
-    "name": "hirvi-wp/toolbox",
+    "name": "hirvi-wp/hwp-toolbox",
     "description": "Common classes and functions for WP Development.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0",
