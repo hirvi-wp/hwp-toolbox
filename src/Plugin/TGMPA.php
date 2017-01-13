@@ -2,7 +2,8 @@
 
 namespace HWP\Toolbox\Plugin;
 
-class TGMPA {
+class TGMPA
+{
 
     /**
      * @var array
@@ -13,16 +14,12 @@ class TGMPA {
      * @var array
      */
     protected static $config = [
-        'id'           => 'hirvi',
-        'default_path' => '',
         'menu'         => 'tgmpa-install-plugins',
         'parent_slug'  => 'themes.php',
         'capability'   => 'edit_theme_options',
         'has_notices'  => true,
         'dismissable'  => true,
-        'dismiss_msg'  => '',
         'is_automatic' => false,
-        'message'      => '',
     ];
 
     /**
@@ -33,12 +30,21 @@ class TGMPA {
      */
     public static function setup(array $plugins, $userConfig = [])
     {
-        static::$plugins = $plugins;
-        static::$config = array_merge_recursive(static::$config, $userConfig);
+        require_once plugin_path() . '/dependencies/class-tgm-plugin-activation.php';
 
-        add_action('tgmpa_register', [self, 'register']);
+        static::$plugins = $plugins;
+        static::$config = array_merge(static::$config, $userConfig);
+
+        add_action('tgmpa_register', function() {
+            tgmpa(static::$plugins, static::$config);
+        });
     }
 
+    /**
+     * Register plugins and configuration
+     *
+     * @return void
+     */
     public function register()
     {
         tgmpa(static::$plugins, static::$config);
