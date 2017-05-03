@@ -35,9 +35,7 @@ class TGMPA
         static::$plugins = $plugins;
         static::$config = array_merge(static::$config, $userConfig);
 
-        add_action('tgmpa_register', function() {
-            tgmpa(static::$plugins, static::$config);
-        });
+        add_action('tgmpa_register', [static::class, 'register']);
     }
 
     /**
@@ -45,7 +43,7 @@ class TGMPA
      *
      * @return void
      */
-    public function register()
+    public static function register()
     {
         tgmpa(static::$plugins, static::$config);
     }

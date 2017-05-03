@@ -6,7 +6,7 @@
  * Author: Chris Magnussen
  * Author URI: https://hirvi.no/team/chris
  * Version: 0.1
- * Text Domain: vc-utils
+ * Text Domain: hwp-toolbox
  * License: GPLv2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
